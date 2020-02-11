@@ -1,7 +1,10 @@
+//Write a program to Implement a 3*3 matrix which takes user input using input( ) function and the concept of Functions as a whole for 
+//GAUSSIAN ELIMINATION, LU DECOMPOSITION, INVERSE. ( 3 different Functions)
 disp("enter the matrix")
 A = [input("value"), input("value"), input("value"); input("value"), input("value"), input("value"); input("value"), input("value"), input("value")];
 disp("the matrix is:")
 disp(A)
+//Gaussian elimination
 function Gauss(A)
     n= 3;
     for i=2:n
@@ -22,6 +25,7 @@ function Gauss(A)
     disp(A(3,3), A(2,2), A(1,1), "the pivots are")
 endfunction
 
+//LU Decomposition
 function LU(A)
     U = A;
     m = det(U(1,1));
@@ -40,6 +44,7 @@ function LU(A)
     disp(L, "the lower triangular matrix is:")
 endfunction
 
+//Inverse
 function Inverse(A)
     n = 3;
     Aug = [A, eye(n,n)]
