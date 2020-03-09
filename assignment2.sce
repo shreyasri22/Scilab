@@ -3,6 +3,7 @@ A = [input("value"), input("value"), input("value"); input("value"), input("valu
 disp("the matrix is:")
 disp(A)
 
+//find column space of A
 function Colspace(A)
     [m,n] = size(A);
     A(2,:) = A(2,:) - (A(2,1)/A(1,1))*A(1,:);
@@ -23,6 +24,7 @@ function Colspace(A)
     end
 endfunction
 
+//find the four fundamental subspaces of A
 function Subspaces(A)
     [m,n] = size(A);
     disp(m, 'm=')
